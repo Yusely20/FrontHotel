@@ -4,6 +4,9 @@
  */
 package interfaz;
 
+
+//adsidhais 
+
 /**
  *
  * @author zapat
@@ -44,7 +47,7 @@ public class Inicio extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interfaz/Img9.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interfaz/Img15.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 360, 340));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interfaz/Img3.jpg"))); // NOI18N
