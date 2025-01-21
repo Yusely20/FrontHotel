@@ -98,6 +98,12 @@ public class JFrameAdmin extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jCBTareaConserje = new javax.swing.JComboBox<>();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        txtCedulaReserva = new javax.swing.JTextField();
+        jLabel25 = new javax.swing.JLabel();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -132,6 +138,8 @@ public class JFrameAdmin extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 430, 60));
+
+        jTabbedPane.setBackground(new java.awt.Color(198, 212, 225));
 
         jPanel2.setBackground(new java.awt.Color(201, 223, 232));
 
@@ -571,7 +579,7 @@ public class JFrameAdmin extends javax.swing.JFrame {
 
         jLabel29.setFont(new java.awt.Font("Lucida Bright", 1, 14)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel29.setText("+ Asiganar Tarea Recepción");
+        jLabel29.setText("+ Asignar Tarea Recepción");
 
         jLabel17.setFont(new java.awt.Font("Lucida Bright", 1, 13)); // NOI18N
         jLabel17.setText("Nombre Empleado");
@@ -631,7 +639,7 @@ public class JFrameAdmin extends javax.swing.JFrame {
         btnAsignarConserje.setForeground(new java.awt.Color(255, 255, 255));
         btnAsignarConserje.setText("ASIGNAR");
 
-        jCBTareaRecepcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Atención al cliente y registro de visitantes", "Gestión de correspondencia y llamadas telefónicas", "Organización de agendas y citas de gerentes", "Gestión de solicitudes de acceso a áreas restringidas", "Coordinación de salas de reuniones y eventos.", " ", " " }));
+        jCBTareaRecepcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Atención al cliente y registro de visitantes", "Gestión de correspondencia y llamadas telefónicas", "Organización de agendas y citas de gerentes", "Gestión de solicitudes de acceso a áreas restringidas", "Coordinación de salas de reuniones y eventos." }));
         jCBTareaRecepcion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCBTareaRecepcionActionPerformed(evt);
@@ -642,7 +650,7 @@ public class JFrameAdmin extends javax.swing.JFrame {
 
         jLabel19.setFont(new java.awt.Font("Lucida Bright", 1, 14)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel19.setText("+ Asuganar Tarea Conserje");
+        jLabel19.setText("+ Asignar Tarea Conserje");
 
         jLabel20.setFont(new java.awt.Font("Lucida Bright", 1, 13)); // NOI18N
         jLabel20.setText("Nombre Empleado");
@@ -720,6 +728,56 @@ public class JFrameAdmin extends javax.swing.JFrame {
         );
 
         jTabbedPane.addTab("Asignación Tarea", jPanel5);
+
+        jPanel6.setBackground(new java.awt.Color(218, 219, 249));
+
+        jLabel22.setFont(new java.awt.Font("Lucida Bright", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel22.setText("ENTRADA");
+
+        jLabel23.setFont(new java.awt.Font("Lucida Bright", 1, 14)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel23.setText("SALIDA");
+
+        jLabel24.setFont(new java.awt.Font("Lucida Bright", 1, 14)); // NOI18N
+        jLabel24.setText("Ingrese el número de cédula");
+
+        jLabel25.setFont(new java.awt.Font("Lucida Bright", 1, 12)); // NOI18N
+        jLabel25.setText("Elige el Mes");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel25)
+                    .addComponent(txtCedulaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel24)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel22)
+                        .addGap(339, 339, 339)
+                        .addComponent(jLabel23)))
+                .addContainerGap(596, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtCedulaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(jLabel23))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel25)
+                .addContainerGap(349, Short.MAX_VALUE))
+        );
+
+        jTabbedPane.addTab("Reserva", jPanel6);
 
         getContentPane().add(jTabbedPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 1120, 530));
 
@@ -849,6 +907,10 @@ public class JFrameAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
@@ -865,6 +927,7 @@ public class JFrameAdmin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -885,6 +948,7 @@ public class JFrameAdmin extends javax.swing.JFrame {
     private javax.swing.JTextField txtCedulaBuscarEmpleado;
     private javax.swing.JTextField txtCedulaCliente;
     private javax.swing.JTextField txtCedulaEmpleado;
+    private javax.swing.JTextField txtCedulaReserva;
     private javax.swing.JTextField txtNombreArticulo;
     private javax.swing.JTextField txtNombreArticuloBuscar;
     private javax.swing.JTextField txtNombreAsignarTareaConserje;
