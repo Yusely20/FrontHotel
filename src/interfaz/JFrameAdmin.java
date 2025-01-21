@@ -102,8 +102,23 @@ public class JFrameAdmin extends javax.swing.JFrame {
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        txtCedulaReserva = new javax.swing.JTextField();
+        txtNombreReserva = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jCBMesEntradaReserva = new javax.swing.JComboBox<>();
+        jCBDiaEntradaReserva = new javax.swing.JComboBox<>();
+        jCBMesSalidaReserva = new javax.swing.JComboBox<>();
+        jCBDiaSalidaReserva = new javax.swing.JComboBox<>();
+        jCBHabitacionReserva = new javax.swing.JComboBox<>();
+        jLabel34 = new javax.swing.JLabel();
+        txtCedulaReserva = new javax.swing.JTextField();
+        btnBuscarReserva = new javax.swing.JButton();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTableVisualizarReserva = new javax.swing.JTable();
+        btnConfirmarReserva = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -740,41 +755,145 @@ public class JFrameAdmin extends javax.swing.JFrame {
         jLabel23.setText("SALIDA");
 
         jLabel24.setFont(new java.awt.Font("Lucida Bright", 1, 14)); // NOI18N
-        jLabel24.setText("Ingrese el número de cédula");
+        jLabel24.setText("Nombre del Cliente");
+
+        txtNombreReserva.setEnabled(false);
 
         jLabel25.setFont(new java.awt.Font("Lucida Bright", 1, 12)); // NOI18N
         jLabel25.setText("Elige el Mes");
+
+        jLabel30.setFont(new java.awt.Font("Lucida Bright", 1, 12)); // NOI18N
+        jLabel30.setText("Día de Ingreso");
+
+        jLabel31.setFont(new java.awt.Font("Lucida Bright", 1, 12)); // NOI18N
+        jLabel31.setText("Elija el Mes");
+
+        jLabel32.setFont(new java.awt.Font("Lucida Bright", 1, 12)); // NOI18N
+        jLabel32.setText("Día de Salida");
+
+        jLabel33.setFont(new java.awt.Font("Lucida Bright", 1, 12)); // NOI18N
+        jLabel33.setText("Habitación");
+
+        jCBDiaEntradaReserva.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+
+        jCBMesSalidaReserva.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Enero" }));
+
+        jLabel34.setFont(new java.awt.Font("Lucida Bright", 1, 14)); // NOI18N
+        jLabel34.setText("Número de Cédula");
+
+        btnBuscarReserva.setBackground(new java.awt.Color(0, 102, 102));
+        btnBuscarReserva.setFont(new java.awt.Font("Lucida Bright", 1, 16)); // NOI18N
+        btnBuscarReserva.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscarReserva.setText("Buscar");
+
+        jTableVisualizarReserva.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Meses", "Días Disponibles"
+            }
+        ));
+        jScrollPane5.setViewportView(jTableVisualizarReserva);
+
+        btnConfirmarReserva.setBackground(new java.awt.Color(204, 0, 153));
+        btnConfirmarReserva.setFont(new java.awt.Font("Lucida Bright", 1, 16)); // NOI18N
+        btnConfirmarReserva.setForeground(new java.awt.Color(255, 255, 255));
+        btnConfirmarReserva.setText("Confirmar Reserva");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(59, 59, 59)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel25)
-                    .addComponent(txtCedulaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel24)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jLabel22)
-                        .addGap(339, 339, 339)
-                        .addComponent(jLabel23)))
-                .addContainerGap(596, Short.MAX_VALUE))
+                        .addGap(115, 115, 115)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel24)
+                                    .addComponent(txtNombreReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(126, 126, 126)
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtCedulaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel34))
+                                .addGap(140, 140, 140)
+                                .addComponent(btnBuscarReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel6Layout.createSequentialGroup()
+                                        .addComponent(jCBMesEntradaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(138, 138, 138)
+                                        .addComponent(jCBDiaEntradaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel22)
+                                    .addGroup(jPanel6Layout.createSequentialGroup()
+                                        .addComponent(jLabel25)
+                                        .addGap(123, 123, 123)
+                                        .addComponent(jLabel30)))
+                                .addGap(118, 118, 118)
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel23)
+                                    .addGroup(jPanel6Layout.createSequentialGroup()
+                                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel31)
+                                            .addComponent(jCBMesSalidaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(120, 120, 120)
+                                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel32)
+                                            .addComponent(jCBDiaSalidaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(108, 108, 108)
+                                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jCBHabitacionReserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel33)))))
+                            .addComponent(jScrollPane5)))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(455, 455, 455)
+                        .addComponent(btnConfirmarReserva)))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLabel24)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtCedulaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel24)
+                            .addComponent(jLabel34))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtNombreReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCedulaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(btnBuscarReserva)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel22)
                     .addComponent(jLabel23))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel25)
-                .addContainerGap(349, Short.MAX_VALUE))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(jLabel30)
+                    .addComponent(jLabel31)
+                    .addComponent(jLabel32)
+                    .addComponent(jLabel33))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCBMesEntradaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCBDiaEntradaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCBMesSalidaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCBDiaSalidaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCBHabitacionReserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnConfirmarReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         jTabbedPane.addTab("Reserva", jPanel6);
@@ -887,9 +1006,16 @@ public class JFrameAdmin extends javax.swing.JFrame {
     private javax.swing.JButton btnBuscarArticuloAdmin;
     private javax.swing.JButton btnBuscarCliente;
     private javax.swing.JButton btnBuscarEmpleado;
+    private javax.swing.JButton btnBuscarReserva;
+    private javax.swing.JButton btnConfirmarReserva;
     private javax.swing.JLabel fondo;
     private javax.swing.JComboBox<String> jCBCargoEmpleado;
     private javax.swing.JComboBox<String> jCBCategoriaArticulo;
+    private javax.swing.JComboBox<String> jCBDiaEntradaReserva;
+    private javax.swing.JComboBox<String> jCBDiaSalidaReserva;
+    private javax.swing.JComboBox<String> jCBHabitacionReserva;
+    private javax.swing.JComboBox<String> jCBMesEntradaReserva;
+    private javax.swing.JComboBox<String> jCBMesSalidaReserva;
     private javax.swing.JComboBox<String> jCBTareaConserje;
     private javax.swing.JComboBox<String> jCBTareaRecepcion;
     private javax.swing.JComboBox<String> jCBTipoAlerta;
@@ -916,6 +1042,11 @@ public class JFrameAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -932,6 +1063,7 @@ public class JFrameAdmin extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -941,6 +1073,7 @@ public class JFrameAdmin extends javax.swing.JFrame {
     private javax.swing.JTable jTableClientes;
     private javax.swing.JTable jTableEmpleados;
     private javax.swing.JTable jTableVisualizarAsignacion;
+    private javax.swing.JTable jTableVisualizarReserva;
     private javax.swing.JTextField txtApellidoCliente;
     private javax.swing.JTextField txtApellidoEmpleado;
     private javax.swing.JTextField txtCantidadArticulo;
@@ -955,5 +1088,6 @@ public class JFrameAdmin extends javax.swing.JFrame {
     private javax.swing.JTextField txtNombreCliente;
     private javax.swing.JTextField txtNombreEmpleado;
     private javax.swing.JTextField txtNombreEmpleadoAsignarTarea;
+    private javax.swing.JTextField txtNombreReserva;
     // End of variables declaration//GEN-END:variables
 }
