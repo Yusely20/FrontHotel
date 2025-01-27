@@ -1071,6 +1071,7 @@ public class JFrameAdmin extends javax.swing.JFrame {
         getContentPane().add(jTabbedPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 1120, 530));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interfaz/fondo4.jpg"))); // NOI18N
+        fondo.setName(""); // NOI18N
         getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1197, 737));
 
         pack();
